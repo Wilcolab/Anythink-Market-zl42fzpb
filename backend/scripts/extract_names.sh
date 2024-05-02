@@ -15,7 +15,7 @@ fi
 awk -F ',' 'BEGIN {OFS=" "} { 
   email = tolower($4)
   if (email ~ /@amazon.com/) { 
-    print $2, $3
+    print $3, $2
   }
 }' "$file" > output_names.txt
 
