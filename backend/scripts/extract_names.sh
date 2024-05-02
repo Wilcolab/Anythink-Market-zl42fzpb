@@ -16,6 +16,6 @@ awk -F ',' 'BEGIN {OFS=" "} {
   if ($4 ~ /@amazon.com/) { 
     print $2, $3
   }
-}' "$file" > test.txt
+}' "$file" > output_names.txt
 
 
