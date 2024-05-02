@@ -13,7 +13,7 @@ if [ ! -f "$file" ]; then
 fi
 
 awk -F ',' '{ 
-  if ($4 ~ /@amazon.com/) {
+  if ($4 ~ /@amazon.com/) { 
     print $2, $3
   }
 }' "$file" > test.txt
