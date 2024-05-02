@@ -13,7 +13,7 @@ if [ ! -f "$file" ]; then
 fi
 
 awk -F ',' 'BEGIN {OFS=" "} { 
-  email = toLower($4)
+  email = tolower($4)
   if (email ~ /@amazon.com/) { 
     print $2, $3
   }
