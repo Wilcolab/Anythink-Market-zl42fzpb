@@ -12,9 +12,10 @@ if [ ! -f "$file" ]; then
   exit 1
 fi
 
-awk -F ',' '{ 
+awk -F ',' 'BEGIN {OFS=" "} { 
   if ($4 ~ /@amazon.com/) { 
     print $2, $3
   }
 }' "$file" > test.txt
+
 
